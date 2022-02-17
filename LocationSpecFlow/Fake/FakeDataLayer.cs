@@ -1,7 +1,8 @@
-﻿using LocationBDD;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
+using LocationBDD;
 
 namespace LocationSpecFlow.Fake
 {

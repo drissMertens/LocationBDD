@@ -2,3 +2,4 @@ C:\Users\driss\source\repos\LocationBDD\LocationSpecFlow\obj\Debug\netcoreapp3.1
 C:\Users\driss\source\repos\LocationBDD\LocationSpecFlow\obj\Debug\netcoreapp3.1\LocationSpecFlow.AssemblyInfoInputs.cache
 C:\Users\driss\source\repos\LocationBDD\LocationSpecFlow\obj\Debug\netcoreapp3.1\LocationSpecFlow.AssemblyInfo.cs
 C:\Users\driss\source\repos\LocationBDD\LocationSpecFlow\obj\Debug\netcoreapp3.1\LocationSpecFlow.csproj.CoreCompileInputs.cache
+C:\Users\driss\source\repos\LocationBDD\LocationSpecFlow\obj\Debug\netcoreapp3.1\LocationSpecFlow.csproj.AssemblyReference.cache
