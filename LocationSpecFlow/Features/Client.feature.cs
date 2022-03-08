@@ -98,10 +98,10 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 4
  testRunner.Given("the username Bob69, the password azerty, the name Bob, the lastname Lenon and the" +
-                        " birthdate 01/01/2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        " birthdate 01, 01, 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
- testRunner.When("the client is older than 17 year old", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the client is major", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 6
  testRunner.Then("the client is register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -137,11 +137,11 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
- testRunner.Given("the username Bob69, the password azerty, the name Bob, the lastname Lenon and the" +
-                        " birthdate 01/01/2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the username Lisa24, the password azerty, the name Lisa, the lastname Simson and " +
+                        "the birthdate 01, 01, 2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.When("the client is older than 17 year old", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the client is not major", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
  testRunner.Then("the client is not register because he is to young", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

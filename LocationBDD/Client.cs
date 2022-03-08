@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace LocationBDD
 {
@@ -22,13 +23,23 @@ namespace LocationBDD
             this.Password = password;
         }
 
-        public Client(string username, string password, string name, string lastName, DateTime licenceDate)
+        public Client(string username, string password, string name, string lastName, DateTime birthday)
         {
             this.Username = username;
             this.Password = password;
             this.Name = name;
             this.LastName = lastName;
-            this.Birthday = licenceDate;
+            this.Birthday = birthday;
+        }
+
+        public int Age()
+        {
+            return (DateTime.Now.Year - this.Birthday.Year); 
+        }
+
+        public Boolean estMajeur()
+        {
+            return this.Age() > 17 ? true : false;
         }
     }
 }
