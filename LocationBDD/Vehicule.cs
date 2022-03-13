@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LocationBDD
 {
@@ -11,6 +12,8 @@ namespace LocationBDD
         private float PriceReservation { get;}
         private float PriceKilometrique { get;}
         private float ChvFiscaux { get;}
+
+        private List<List<DateTime>> ReservationDate { get; set; }
 
 
         public Vehicule(string immatriculation, string marque, string model, string color, 
