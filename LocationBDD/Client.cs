@@ -15,7 +15,7 @@ namespace LocationBDD
 
         public DateTime Birthday { get; private set; }
 
-        public DateTime LicenceDate { get; private set; }
+        public DateTime LicenceDate { get; set; }
 
         public Client(string username, string password)
         {
@@ -43,15 +43,14 @@ namespace LocationBDD
         }
 
 
-        public int anciennetePermis()
+        private int anciennetePermis()
         {
-            return (DateTime.Now.Month - this.LicenceDate);
+            return (DateTime.Now.Month - this.LicenceDate.Month);
         }
 
-        public Boolean permisValide(DateTime permis)
+        public Boolean permisValide(int limit)
         {
-            this.LicenceDate = permis;
-            return this.anciennetePermis() > 6 ? true : false;
+            return this.anciennetePermis() > limit ? true : false;
         }
     }
 }
