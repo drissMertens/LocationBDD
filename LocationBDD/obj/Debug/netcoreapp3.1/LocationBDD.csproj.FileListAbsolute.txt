@@ -7,3 +7,4 @@ C:\Users\driss\source\repos\LocationBDD\LocationBDD\obj\Debug\netcoreapp3.1\Loca
 C:\Users\driss\source\repos\LocationBDD\LocationBDD\obj\Debug\netcoreapp3.1\LocationBDD.csproj.CoreCompileInputs.cache
 C:\Users\driss\source\repos\LocationBDD\LocationBDD\obj\Debug\netcoreapp3.1\LocationBDD.dll
 C:\Users\driss\source\repos\LocationBDD\LocationBDD\obj\Debug\netcoreapp3.1\LocationBDD.pdb
+C:\Users\driss\source\repos\LocationBDD\LocationBDD\obj\Debug\netcoreapp3.1\LocationBDD.csproj.AssemblyReference.cache
