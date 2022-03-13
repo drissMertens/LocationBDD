@@ -1,15 +1,18 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using LocationBDD;
 
 namespace LocationSpecFlow.Features
 {
     [Binding]
     public class VehiculeTestSteps
     {
+        Vehicule test = new Vehicule();
+
         [Given(@"my immatriculation is ""(.*)""")]
         public void GivenMyImmatriculationIs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            test.Immatriculation = p0;
         }
         
         [Given(@"my marque is ""(.*)""")]
