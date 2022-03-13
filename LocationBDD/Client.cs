@@ -41,5 +41,17 @@ namespace LocationBDD
         {
             return this.Age() > 17 ? true : false;
         }
+
+
+        public int anciennetePermis()
+        {
+            return (DateTime.Now.Month - this.LicenceDate);
+        }
+
+        public Boolean permisValide(DateTime permis)
+        {
+            this.LicenceDate = permis;
+            return this.anciennetePermis() > 6 ? true : false;
+        }
     }
 }
