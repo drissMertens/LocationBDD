@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace LocationBDD
 {
     public class Location
     {
         private IDataLayer _dataLayer;
+
+        public List<Vehicule> vehicules { get; set; }
 
         public bool UserConnected { get; private set; }
 
@@ -43,5 +46,7 @@ namespace LocationBDD
 
             return "";
         }
+
+         
     }
 }
