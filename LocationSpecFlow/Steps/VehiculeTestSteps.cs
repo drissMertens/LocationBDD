@@ -6,7 +6,13 @@ namespace LocationSpecFlow.Features
     [Binding]
     public class VehiculeTestSteps
     {
-        Vehicule test = new Vehicule();
+         Vehicule test;
+        [Given(@"je cree un newVehicule")]
+        public void GivenJeCreeUnNewVehicule(string immatriculation, string marque, string model, string color, float priceReservation, float priceKilometrique, float chvFiscaux)
+        {
+            test = new Vehicule(immatriculation, marque, model, color, priceReservation, priceKilometrique, chvFiscaux);
+        }
+
         [Given(@"my immatriculation is ""(.*)""")]
         public void GivenMyImmatriculationIs(string p0)
         {

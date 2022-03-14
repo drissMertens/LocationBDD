@@ -13,12 +13,8 @@ namespace LocationBDD
         public float PriceKilometrique { get; set; }
         public float ChvFiscaux { get; set; }
 
-        private List<List<DateTime>> DebutReservationDate { get; set; }
-        private List<List<DateTime>> FinReservationDate { get; set; }
-
         public Vehicule(string immatriculation, string marque, string model, string color, 
-                        float priceReservation, float priceKilometrique, float chvFiscaux,
-                        List<List<DateTime>> debutReservationDate, List<List<DateTime>> finReservationDate)
+                        float priceReservation, float priceKilometrique, float chvFiscaux)
         {
             this.Immatriculation = immatriculation;
             this.Marque = marque;
@@ -27,10 +23,7 @@ namespace LocationBDD
             this.PriceReservation = priceReservation;
             this.PriceKilometrique = priceKilometrique;
             this.ChvFiscaux = chvFiscaux;
-            this.DebutReservationDate = debutReservationDate;
-            this.FinReservationDate = finReservationDate;
-
-
+        
         }
 
      
