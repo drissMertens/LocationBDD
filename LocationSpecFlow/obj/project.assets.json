@@ -1881,6 +1881,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "LocationBDD/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/LocationBDD.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LocationBDD.dll": {}
+        }
       }
     }
   },
@@ -6810,11 +6820,17 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "LocationBDD/1.0.0": {
+      "type": "project",
+      "path": "../LocationBDD/LocationBDD.csproj",
+      "msbuildProject": "../LocationBDD/LocationBDD.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "FluentAssertions >= 6.2.0",
+      "LocationBDD >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.0.0",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "SpecRun.SpecFlow >= 3.9.7"
@@ -6846,7 +6862,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\driss\\source\\repos\\LocationBDD\\LocationBDD\\LocationBDD.csproj": {
+              "projectPath": "C:\\Users\\driss\\source\\repos\\LocationBDD\\LocationBDD\\LocationBDD.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
