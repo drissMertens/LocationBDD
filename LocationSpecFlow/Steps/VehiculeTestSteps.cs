@@ -1,58 +1,55 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using LocationBDD;
+using LocationSpecFlow.Fake;
+
 namespace LocationSpecFlow.Features
 {
     [Binding]
     public class VehiculeTestSteps
     {
-         Vehicule test;
-        [Given(@"je cree un newVehicule")]
-        public void GivenJeCreeUnNewVehicule(string immatriculation, string marque, string model, string color, float priceReservation, float priceKilometrique, float chvFiscaux)
+        private readonly ScenarioContext _scenarioContext;
+
+        private string _immatriculation;
+        private string _marque;
+        private string _model;
+        private string _color;
+        private float _priceReservation;
+        private float _priceKilometrique;
+        private int _chvFiscaux;
+        private string _lastErrorMessage;
+        //private Location _target;
+        private FakeDataLayer _fakeDataLayer;
+
+        public VehiculeTestSteps(ScenarioContext scenarioContext)
         {
-            test = new Vehicule(immatriculation, marque, model, color, priceReservation, priceKilometrique, chvFiscaux);
+            _scenarioContext = scenarioContext;
+            this._fakeDataLayer = new FakeDataLayer();
+            //  this._target = new Location(this._fakeDataLayer);
         }
 
-        [Given(@"my immatriculation is ""(.*)""")]
-        public void GivenMyImmatriculationIs(string p0)
+        [Given(@"je cree un newVehicule avec pour immatriculation ""(.*)"", marque ""(.*)"", model ""(.*)"", color ""(.*)"", PriceReservation ""(.*)"" €, PriceKilometrique ""(.*)""€ ChvFiscaux is ""(.*)""")]
+        public void GivenJeCreeUnNewVehiculeAvecPourImmatriculationMarqueModelColorPriceReservationPriceKilometriqueChvFiscauxIs(string immatriculation, string marque, string model, string color, float priceReservation, float priceKilometrique, float chvFiscaux)
         {
-            test.Immatriculation = p0;
-        }
-        
-        [Given(@"my marque is ""(.*)""")]
-        public void GivenMyMarqueIs(string p0)
-        {
-            test.Marque = p0;
-        }
-        
-        [Given(@"my model is ""(.*)""")]
-        public void GivenMyModelIs(string p0)
-        {
-            test.Model = p0;
-        }
-        
-        [Given(@"my color is ""(.*)""")]
-        public void GivenMyColorIs(string p0)
-        {
-            test.Color = p0;
+            Vehicule test = new Vehicule(immatriculation, marque, model, color, priceReservation, priceKilometrique, chvFiscaux);
         }
 
-        [Given(@"PriceReservation is ""(.*)"" €")]
-        public void GivenPriceReservationIs(int p0)
+        [Given(@"the immatriculation (.*), the model (.*), the ChvFiscaux (.*)")]
+        public void GivenTheImmatriculationPO_HGTheModelClio_RSTheChvFiscaux(string immatriculation, string model, int chevaux)
         {
-            test.PriceReservation = p0;
+            this._immatriculation = immatriculation;
+            this._model = model;
+            this._chvFiscaux = chevaux;
         }
 
-        [Given(@"PriceKilometrique is ""(.*)""€")]
-        public void GivenPriceKilometriqueIs(int p0)
+        [When(@"the data match")]
+        public void WhenTheDataMatch()
         {
-            test.PriceKilometrique = p0;
         }
 
-        [Given(@"ChvFiscaux is ""(.*)""")]
-        public void GivenChvFiscauxIs(int p0)
+        [Then(@"the vehicule is the (.*)")]
+        public void ThenTheVehiculeIsTheRenault(string marque)
         {
-            test.ChvFiscaux = p0;
         }
 
     }

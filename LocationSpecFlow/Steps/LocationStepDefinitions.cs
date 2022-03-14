@@ -36,7 +36,6 @@ namespace LocationSpecFlow.Steps
         }
 
         #endregion
-
         [Given(@"my username is ""(.*)""")]
         public void GivenMyUsernameIs(string username)
         {
