@@ -1,51 +1,52 @@
 ﻿using System;
 using TechTalk.SpecFlow;
-
+using LocationBDD;
 namespace LocationSpecFlow.Features
 {
     [Binding]
     public class VehiculeTestSteps
     {
+        Vehicule test = new Vehicule();
         [Given(@"my immatriculation is ""(.*)""")]
         public void GivenMyImmatriculationIs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            test.Immatriculation = p0;
         }
         
         [Given(@"my marque is ""(.*)""")]
         public void GivenMyMarqueIs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            test.Marque = p0;
         }
         
         [Given(@"my model is ""(.*)""")]
         public void GivenMyModelIs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            test.Model = p0;
         }
         
         [Given(@"my color is ""(.*)""")]
         public void GivenMyColorIs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            test.Color = p0;
         }
 
         [Given(@"PriceReservation is ""(.*)"" €")]
         public void GivenPriceReservationIs(int p0)
         {
-            ScenarioContext.Current.Pending();
+            test.PriceReservation = p0;
         }
 
         [Given(@"PriceKilometrique is ""(.*)""€")]
         public void GivenPriceKilometriqueIs(int p0)
         {
-            ScenarioContext.Current.Pending();
+            test.PriceKilometrique = p0;
         }
 
         [Given(@"ChvFiscaux is ""(.*)""")]
         public void GivenChvFiscauxIs(int p0)
         {
-            ScenarioContext.Current.Pending();
+            test.ChvFiscaux = p0;
         }
 
     }
